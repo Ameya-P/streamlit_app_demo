@@ -9,3 +9,4 @@ st.set_page_config(
 )
 
 st.title("Voluntary Registry Offsets Database")
+st.markdown("<span style='color:red'> Text content</span>")
