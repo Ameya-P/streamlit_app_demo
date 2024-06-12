@@ -15,4 +15,4 @@ st.markdown(":blue[Berkeley Carbon Trading Project's] Voluntary Registry Offsets
 st.markdown("Version 11 contains all projects, issuances, and retirements through March 31, 2024.")
 
 creative_common_url = "https://creativecommons.org/licenses/by-sa/4.0/"
-st.markdown("Released under [Creative Commons Attribution (CC BY-SA 4.0) license] (%s).  If you wish to use, adapt, or reference this material, please cite as:" % creative_common_url)
+st.markdown("Released under [Creative Commons Attribution (CC BY-SA 4.0) license](%s).  If you wish to use, adapt, or reference this material, please cite as:" % creative_common_url)
