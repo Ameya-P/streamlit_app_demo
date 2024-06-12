@@ -11,3 +11,5 @@ st.set_page_config(
 st.title("Voluntary Registry Offsets Database")
 st.markdown(''' :blue[Berkeley Carbon Trading Project's] Voluntary Registry Offsets Database contains all carbon offset projects listed globally by four major voluntary offset project registries: American Carbon Registry (ACR), Climate Action Reserve (CAR), Gold Standard, and Verra (VCS). These four registries generate almost all of the world's voluntary market offsets and include projects eligible for use under the California, Quebec, and Washington lcap-and-trade programs as well as UN Clean Development Mechanism projects that transitioned into one of the voluntary registries.
 ''')
+st.markdown("Version 11 contains all projects, issuances, and retirements through March 31, 2024.")
+st.markdown("Released under [Creative Commons Attribution (CC BY-SA 4.0) license] (https://creativecommons.org/licenses/by-sa/4.0/).  If you wish to use, adapt, or reference this material, please cite as:")
