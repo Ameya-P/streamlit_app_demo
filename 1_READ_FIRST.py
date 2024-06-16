@@ -30,6 +30,7 @@ st.markdown("[https://gspp.berkeley.edu/faculty-and-impact/centers/cepp/projects
 #--------------------
 st.header("DATABASE TABS")
 
+#---
 st.subheader("PROJECTS tab")
 
 st.markdown("Lists all projects in all registries and can be filtered/sorted using drop-down menus. Filtered results are simultaneously viewable on the Charts and Map tabs.")
@@ -42,18 +43,22 @@ st.markdown('''* Black font indicates data directly sourced from the registries;
 vrod_url = "https://gspp.berkeley.edu/assets/uploads/page/VROD-Calculations.pdf"
 st.markdown(":blue[All of our calculations are described in [VROD Calculations, linked here].](%s)" %vrod_url)
 
+#---
 st.subheader("CHARTS tab")
 
 st.markdown("View dynamic charts — use the column filters in PROJECTS tab to display filter results in the charts.")
 
+#---
 st.subheader("MAP tab")
 
 st.markdown("View the distribution of projects around the world by number of projects and by credits issued. Use the column filters in PROJECTS tab to display filter results upon this map.")
 
+#---
 st.subheader("TABLE tab")
 
 st.markdown("Tallies projects, credits issued, and credits remaining by scope and type. Filter using the drop-down menus. Double click on any number to create a new tab with full information on all projects included in that row.")
 
+#---
 st.subheader("CREDITS BY VINTAGE tab")
 
 st.markdown("Dynamic generator allows comprehensive view of all credits issued, retired, and remaining by vintage for any project. Simply select a Project ID from the drop-down menu and project data & details will populate.")
@@ -67,25 +72,39 @@ st.markdown("[Downloaded the registry files we used to built this database: VROD
 #--------------------
 st.header("MORE INFORMATION")
 
+#---
 st.subheader("*Registry data and project documents:*")
 
+#---
 st.subheader("American Carbon Registry (ACR)")
 
+#---
 st.subheader("Climate Action Reserve (CAR)")
 
+#---
 st.subheader("Gold Standard (GS)")
 
+#---
 st.subheader("Verified Carbon Standard (VCS)")
-vcs_registry_url = 
-st.markdown("[Registry](%s)" %vcs_registry_url)
 
-vcs_credits_url = 
+vcs_registry_url = "https://registry.verra.org/"
+st.markdown("[Registry & Projects](%s)" %vcs_registry_url)
+
+vcs_credits_url = "https://registry.verra.org/app/search/VCS"
 st.markdown("[Credits Issued & Retired](%s)" %vcs_credits_url)
 
-vcs_protocols_url = 
-st.markdown("[Protocols](%s)" %vcs_protocols_url)
+vcs_buffer_url = "https://registry.verra.org/app/search/VCS/All%20Projects"
+st.markdown("[Buffer Pool](%s)" %vcs_buffer_url)
 
+vcs_methods_url = "https://verra.org/methodologies-main/"
+st.markdown("[VCS Methodologies](%s)" %vcs_methods_url)
+
+vcs_cdm_url = "https://cdm.unfccc.int/methodologies/index.html"
+st.markdown("[CDM Methodologies](%s)" %vcs_cdm_url)
+
+#---
 st.subheader("California Air Resources Board (ARB)")
+
 arb_registry_url = "https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program"
 st.markdown("[Registry](%s)" %arb_registry_url)
 
@@ -95,6 +114,7 @@ st.markdown("[Credits Issued & Retired](%s)" %arb_credits_url)
 arb_protocols_url = "https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program/compliance-offset-protocols"
 st.markdown("[Protocols](%s)" %arb_protocols_url)
 
+#---
 st.subheader("Washington State Climate Commitment Act (WA)")
 
 wa_registry_url = "https://ecology.wa.gov/Air-Climate/Climate-Commitment-Act/Cap-and-invest/Offsets"
@@ -103,6 +123,7 @@ st.markdown("[Registry](%s)" %wa_registry_url)
 wa_credits_url = "https://apps.ecology.wa.gov/publications/documents/2314026.pdf"
 st.markdown("[Credits Issued](%s)" %wa_credits_url)
 
+#---
 st.markdown("Projects and credits issued under the **UN's Clean Development Mechanism (CDM)** are only included in this voluntary registry offsets database if they have been transitioned to one of the voluntary registries.")
 
 un_url = "https://cdm.unfccc.int/"
@@ -114,7 +135,7 @@ st.markdown("CDM projects can also be found in the [UNEP's CDM Pipeline Database
 cdm_url = "https://cdm.unfccc.int/methodologies/index.html"
 st.markdown("Some projects registered by voluntary registries use [CDM methodologies](%s). (These methodologies can be found with an online search for their name or ID.)" %cdm_url)
 
-
+#---
 st.subheader("Project Documents:")
 
 st.markdown('''You can view all project documents by visiting the project links above and searching for the project ID or name (you may need to scroll right and look for the search box).
