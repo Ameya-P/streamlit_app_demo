@@ -101,7 +101,7 @@ r_tab1, r_tab2, r_tab3, r_tab4, r_tab5, r_tab6, r_tab7 = st.tabs(["American Carb
 st.subheader("*Registry data and project documents:*")
 
 #--- Tab 1
-st.subheader("American Carbon Registry (ACR)")
+r_tab1.subheader("American Carbon Registry (ACR)")
 
 acr_registry_url = "https://americancarbonregistry.org/"
 r_tab1.markdown("[Registry](%s)" %acr_registry_url)
@@ -128,7 +128,7 @@ acr_methods_url = "https://acrcarbon.org/methodologies/approved-methodologies/"
 r_tab1.markdown("[Methodologies/Protocols](%s)" %acr_methods_url)
 
 #--- Tab 2
-st.subheader("Climate Action Reserve (CAR)")
+r_tab2.subheader("Climate Action Reserve (CAR)")
 
 car_registry_url = "https://www.climateactionreserve.org/"
 r_tab2.markdown("[Registry](%s)" %car_registry_url)
@@ -152,7 +152,7 @@ car_methods_url = "https://www.climateactionreserve.org/how/protocols/"
 r_tab2.markdown("[Methodologies/Protocols](%s)" %car_methods_url)
 
 #--- Tab 3
-st.subheader("Gold Standard (GS)")
+r_tab3.subheader("Gold Standard (GS)")
 
 gs_registry_url = "https://www.goldstandard.org/"
 r_tab3.markdown("[Registry](%s)" %gs_registry_url)
