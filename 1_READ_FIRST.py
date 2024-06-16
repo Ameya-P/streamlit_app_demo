@@ -37,7 +37,7 @@ db_tab1, db_tab2, db_tab3, db_tab4, db_tab5 = st.tabs(["Projects", "Charts", "Ma
 #--- Tab 1
 db_tab1.subheader("PROJECTS tab")
 
-db_tab1.markdown("Lists all projects in all registries and can be filtered/sorted using drop-down menus. Filtered results are simultaneously viewable on the Charts and Map tabs.")
+db_tab1.markdown("Lists all projects in all registries and can be filtered/sorted using drop-down menus. Filtered results are simultaneously viewable on the *Charts* and *Map* tabs.")
 
 db_tab1.markdown('''* Black font indicates data directly sourced from the registries; blue font indicates information and data calculated/added by the Berkeley Carbon Trading Project.
 * Each offset credit nominally represents one metric tonne of CO2-equivalent reduced or removed from the atmosphere.
@@ -50,12 +50,12 @@ db_tab1.markdown(":blue[All of our calculations are described in [VROD Calculati
 #--- Tab 2
 db_tab2.subheader("CHARTS tab")
 
-db_tab2.markdown("View dynamic charts — use the column filters in PROJECTS tab to display filter results in the charts.")
+db_tab2.markdown("View dynamic charts — use the column filters in *PROJECTS* tab to display filter results in the charts.")
 
 #--- Tab 3
 db_tab3.subheader("MAP tab")
 
-db_tab3.markdown("View the distribution of projects around the world by number of projects and by credits issued. Use the column filters in PROJECTS tab to display filter results upon this map.")
+db_tab3.markdown("View the distribution of projects around the world by number of projects and by credits issued. Use the column filters in *PROJECTS* tab to display filter results upon this map.")
 
 #--- Tab 4
 db_tab4.subheader("TABLE tab")
