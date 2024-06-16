@@ -242,7 +242,10 @@ st.markdown('''You can view all project documents by visiting the project links 
 
 st.divider()
 
-#--- Thank You and Version
+#--- Thank You
 st.markdown("*We wholeheartedly thank the UC Berkeley students who helped write the Python code to build this database from the downloaded registry data: **Riyya Ahmed, Raaed Kamran Muggo, Ameya Patkar, Xinyun Rong**.*")
 
+st.divider()
+
+#--- Version
 st.markdown("*Version 11*")
