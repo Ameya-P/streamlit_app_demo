@@ -124,7 +124,9 @@ wa_credits_url = "https://apps.ecology.wa.gov/publications/documents/2314026.pdf
 st.markdown("[Credits Issued](%s)" %wa_credits_url)
 
 #---
-st.markdown("Projects and credits issued under the **UN's Clean Development Mechanism (CDM)** are only included in this voluntary registry offsets database if they have been transitioned to one of the voluntary registries.")
+st.subheader("UN's Clean Development Mechanism (CDM)")
+
+st.markdown("Projects and credits issued under the :blue[UN's Clean Development Mechanism (CDM)] are only included in this voluntary registry offsets database if they have been transitioned to one of the voluntary registries.")
 
 un_url = "https://cdm.unfccc.int/"
 st.markdown("CDM projects can be found at the [UN's CDM website](%s)." %un_url)
@@ -150,6 +152,6 @@ st.markdown('''You can view all project documents by visiting the project links 
 * **Methodology (also called Protocol)** - defines the eligibility, emissions calculations, and monitoring requirements for specific project types to generate offset credits.
 ''')
 
-st.markdown("We wholeheartedly thank the UC Berkeley students who helped write the Python code to build this database from the downloaded registry data: Riyya Ahmed, Raaed Kamran Muggo, Ameya Patkar, Xinyun Rong.")
+st.markdown("*We wholeheartedly thank the UC Berkeley students who helped write the Python code to build this database from the downloaded registry data: **Riyya Ahmed, Raaed Kamran Muggo, Ameya Patkar, Xinyun Rong**.*")
 
-st.markdown("Version 11")
+st.markdown("*Version 11*")
