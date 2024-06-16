@@ -35,7 +35,7 @@ st.header("DATABASE TABS")
 db_tab1, db_tab2, db_tab3, db_tab4, db_tab5 = st.tabs(["Projects", "Charts", "Map", "Table", "Credits by Vintage"])
 
 #--- Tab 1
-db_tab1.subheader("PROJECTS tab")
+db_tab1.subheader("Projects Tab")
 
 db_tab1.markdown("Lists all projects in all registries and can be filtered/sorted using drop-down menus. Filtered results are simultaneously viewable on the *Charts* and *Map* tabs.")
 
@@ -48,22 +48,22 @@ vrod_url = "https://gspp.berkeley.edu/assets/uploads/page/VROD-Calculations.pdf"
 db_tab1.markdown(":blue[All of our calculations are described in [VROD Calculations, linked here].](%s)" %vrod_url)
 
 #--- Tab 2
-db_tab2.subheader("CHARTS tab")
+db_tab2.subheader("Charts Tab")
 
 db_tab2.markdown("View dynamic charts — use the column filters in *PROJECTS* tab to display filter results in the charts.")
 
 #--- Tab 3
-db_tab3.subheader("MAP tab")
+db_tab3.subheader("Map Tab")
 
 db_tab3.markdown("View the distribution of projects around the world by number of projects and by credits issued. Use the column filters in *PROJECTS* tab to display filter results upon this map.")
 
 #--- Tab 4
-db_tab4.subheader("TABLE tab")
+db_tab4.subheader("Table Tab")
 
 db_tab4.markdown("Tallies projects, credits issued, and credits remaining by scope and type. Filter using the drop-down menus. Double click on any number to create a new tab with full information on all projects included in that row.")
 
 #--- Tab 5
-db_tab5.subheader("CREDITS BY VINTAGE tab")
+db_tab5.subheader("Credits by Vintage Tab")
 
 db_tab5.markdown("Dynamic generator allows comprehensive view of all credits issued, retired, and remaining by vintage for any project. Simply select a Project ID from the drop-down menu and project data & details will populate.")
 
@@ -96,7 +96,7 @@ bctp_url = "https://gspp.berkeley.edu/research-and-impact/centers/cepp/projects/
 st.markdown("[Berkeley Carbon Trading Project](%s)" %bctp_url)
 
 #--- Registry Tabs
-st.subheader("Registry data and project documents:")
+st.subheader("REGISTRY DATA AND PROJECT DOCUMENTS:")
 
 r_tab1, r_tab2, r_tab3, r_tab4, r_tab5, r_tab6, r_tab7 = st.tabs(["American Carbon Registry (ACR)", "Climate Action Reserve (CAR)", "Gold Standard (GS)", "Verified Carbon Standard (VCS)", "California Air Resources Board (ARB)", "Washington State Climate Commitment Act (WA)","UN's Clean Development Mechanism (CDM)"])
 
@@ -220,7 +220,7 @@ cdm_url = "https://cdm.unfccc.int/methodologies/index.html"
 r_tab7.markdown("Some projects registered by voluntary registries use [CDM methodologies](%s). (These methodologies can be found with an online search for their name or ID.)" %cdm_url)
 
 #--- Project Documents
-st.subheader("Project Documents:")
+st.subheader("PROJECT DOCUMENTS")
 
 st.markdown('''You can view all project documents by visiting the project links above and searching for the project ID or name (you may need to scroll right and look for the search box).
 
