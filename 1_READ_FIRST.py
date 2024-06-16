@@ -95,6 +95,8 @@ st.markdown("[Voluntary Registry Offsets Database webpage](%s)" %vrod_db_url)
 bctp_url = "https://gspp.berkeley.edu/research-and-impact/centers/cepp/projects/berkeley-carbon-trading-project"
 st.markdown("[Berkeley Carbon Trading Project](%s)" %bctp_url)
 
+st.markdown() #Spacer
+
 #--- Registry Tabs
 st.subheader("REGISTRY DATA AND PROJECT DOCUMENTS")
 
@@ -218,6 +220,9 @@ r_tab7.markdown("CDM projects can also be found in the [UNEP's CDM Pipeline Data
 
 cdm_url = "https://cdm.unfccc.int/methodologies/index.html"
 r_tab7.markdown("Some projects registered by voluntary registries use [CDM methodologies](%s). (These methodologies can be found with an online search for their name or ID.)" %cdm_url)
+
+
+st.markdown() #Spacer
 
 #--- Project Documents
 st.subheader("PROJECT DOCUMENTS")
