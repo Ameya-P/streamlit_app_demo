@@ -100,8 +100,8 @@ st.subheader("REGISTRY DATA AND PROJECT DOCUMENTS")
 
 r_tab1, r_tab2, r_tab3, r_tab4, r_tab5, r_tab6, r_tab7 = st.tabs(["American Carbon Registry (ACR)", "Climate Action Reserve (CAR)", "Gold Standard (GS)", "Verified Carbon Standard (VCS)", "California Air Resources Board (ARB)", "Washington State Climate Commitment Act (WA)","UN's Clean Development Mechanism (CDM)"])
 
-#--- Tab 1
-r_tab1.subheader("American Carbon Registry (ACR)")
+#--- Tab 1 [American Carbon Registry (ACR)]
+r_tab1.subheader("ACR")
 
 acr_registry_url = "https://americancarbonregistry.org/"
 r_tab1.markdown("[Registry](%s)" %acr_registry_url)
@@ -127,8 +127,8 @@ r_tab1.markdown("[Credit Status](%s)" %acr_status_url)
 acr_methods_url = "https://acrcarbon.org/methodologies/approved-methodologies/"
 r_tab1.markdown("[Methodologies/Protocols](%s)" %acr_methods_url)
 
-#--- Tab 2
-r_tab2.subheader("Climate Action Reserve (CAR)")
+#--- Tab 2 [Climate Action Reserve (CAR)]
+r_tab2.subheader("CAR")
 
 car_registry_url = "https://www.climateactionreserve.org/"
 r_tab2.markdown("[Registry](%s)" %car_registry_url)
@@ -151,8 +151,8 @@ r_tab2.markdown("[Buffer Pool](%s)" %car_buffer_url)
 car_methods_url = "https://www.climateactionreserve.org/how/protocols/"
 r_tab2.markdown("[Methodologies/Protocols](%s)" %car_methods_url)
 
-#--- Tab 3
-r_tab3.subheader("Gold Standard (GS)")
+#--- Tab 3 [Gold Standard (GS)]
+r_tab3.subheader("GS")
 
 gs_registry_url = "https://www.goldstandard.org/"
 r_tab3.markdown("[Registry](%s)" %gs_registry_url)
@@ -166,8 +166,8 @@ r_tab3.markdown("[Credits Issued & Retired](%s)" %gs_issued_url)
 gs_methods_url = "https://globalgoals.goldstandard.org/"
 r_tab3.markdown("[Methodologies/Protocols](%s)" %gs_methods_url)
 
-#--- Tab 4
-r_tab4.subheader("Verified Carbon Standard (VCS)")
+#--- Tab 4 [Verified Carbon Standard (VCS)]
+r_tab4.subheader("VCS")
 
 vcs_registry_url = "https://registry.verra.org/"
 r_tab4.markdown("[Registry & Projects](%s)" %vcs_registry_url)
@@ -184,8 +184,8 @@ r_tab4.markdown("[VCS Methodologies](%s)" %vcs_methods_url)
 vcs_cdm_url = "https://cdm.unfccc.int/methodologies/index.html"
 r_tab4.markdown("[CDM Methodologies](%s)" %vcs_cdm_url)
 
-#--- Tab 5
-r_tab5.subheader("California Air Resources Board (ARB)")
+#--- Tab 5 [California Air Resources Board (ARB)]
+r_tab5.subheader("ARB")
 
 arb_registry_url = "https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program"
 r_tab5.markdown("[Registry](%s)" %arb_registry_url)
@@ -196,8 +196,8 @@ r_tab5.markdown("[Credits Issued & Retired](%s)" %arb_credits_url)
 arb_protocols_url = "https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program/compliance-offset-protocols"
 r_tab5.markdown("[Protocols](%s)" %arb_protocols_url)
 
-#--- Tab 6
-r_tab6.subheader("Washington State Climate Commitment Act (WA)")
+#--- Tab 6 [Washington State Climate Commitment Act (WA)]
+r_tab6.subheader("WA")
 
 wa_registry_url = "https://ecology.wa.gov/Air-Climate/Climate-Commitment-Act/Cap-and-invest/Offsets"
 r_tab6.markdown("[Registry](%s)" %wa_registry_url)
@@ -205,8 +205,8 @@ r_tab6.markdown("[Registry](%s)" %wa_registry_url)
 wa_credits_url = "https://apps.ecology.wa.gov/publications/documents/2314026.pdf"
 r_tab6.markdown("[Credits Issued](%s)" %wa_credits_url)
 
-#--- Tab 7
-r_tab7.subheader("UN's Clean Development Mechanism (CDM)")
+#--- Tab 7 [UN's Clean Development Mechanism (CDM)]
+r_tab7.subheader("CDM")
 
 r_tab7.markdown("Projects and credits issued under the :blue[UN's Clean Development Mechanism (CDM)] are only included in this voluntary registry offsets database if they have been transitioned to one of the voluntary registries.")
 
