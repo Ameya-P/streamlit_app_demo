@@ -31,6 +31,6 @@ st.markdown(":red[Red font indicates tallies of visible (filtered) projects only
 st.divider()
 
 #------------------ Dataframe
-projects_tab = pd.read_excel("resources/v11.xlsx")
+projects_tab = pd.read_csv("resources/v11.csv")
 
 st.dataframe(projects_tab)
