@@ -30,7 +30,7 @@ st.markdown("[https://gspp.berkeley.edu/faculty-and-impact/centers/cepp/projects
 st.divider()
 
 #-------------------- Database Tabs
-st.header("DATABASE TABS")
+st.header(":green[DATABASE TABS]")
 
 db_tab1, db_tab2, db_tab3, db_tab4, db_tab5 = st.tabs(["Projects", "Charts", "Map", "Table", "Credits by Vintage"])
 
@@ -70,7 +70,7 @@ db_tab5.markdown("Dynamic generator allows comprehensive view of all credits iss
 st.divider()
 
 #-------------------- Registry Data
-st.header("REGISTRY DATA")
+st.header(":green[REGISTRY DATA]")
 
 zip_url = "https://gspp.berkeley.edu/research-and-impact/centers/cepp/projects/berkeley-carbon-trading-project/offsets-database"
 st.markdown("[Downloaded the registry files we used to built this database: VROD-v11-RegistryFiles.zip](%s)" %zip_url)
@@ -78,7 +78,7 @@ st.markdown("[Downloaded the registry files we used to built this database: VROD
 st.divider()
 
 #-------------------- More Information
-st.header("MORE INFORMATION")
+st.header(":green[MORE INFORMATION]")
 
 calc_url = "https://gspp.berkeley.edu/assets/uploads/page/VROD-Calculations.pdf"
 st.markdown("[Detailed Description of Calculations](%s)" %calc_url)
@@ -99,7 +99,7 @@ st.markdown("[Berkeley Carbon Trading Project](%s)" %bctp_url)
 st.divider()
 
 #--- Registry Tabs
-st.subheader("REGISTRY DATA AND PROJECT DOCUMENTS")
+st.header("REGISTRY DATA AND PROJECT DOCUMENTS")
 
 r_tab1, r_tab2, r_tab3, r_tab4, r_tab5, r_tab6, r_tab7 = st.tabs(["ACR", "CAR", "GS", "VCS", "ARB", "WA","CDM"])
 
@@ -226,7 +226,7 @@ r_tab7.markdown("Some projects registered by voluntary registries use [CDM metho
 st.divider()
 
 #--- Project Documents
-st.subheader("PROJECT DOCUMENTS")
+st.header("PROJECT DOCUMENTS")
 
 st.markdown('''You can view all project documents by visiting the project links above and searching for the project ID or name (you may need to scroll right and look for the search box).
 
