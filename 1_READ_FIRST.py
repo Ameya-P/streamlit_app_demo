@@ -96,7 +96,7 @@ bctp_url = "https://gspp.berkeley.edu/research-and-impact/centers/cepp/projects/
 st.markdown("[Berkeley Carbon Trading Project](%s)" %bctp_url)
 
 #--- Registry Tabs
-st.subheader("*Registry data and project documents:*")
+st.subheader("Registry data and project documents:")
 
 r_tab1, r_tab2, r_tab3, r_tab4, r_tab5, r_tab6, r_tab7 = st.tabs(["American Carbon Registry (ACR)", "Climate Action Reserve (CAR)", "Gold Standard (GS)", "Verified Carbon Standard (VCS)", "California Air Resources Board (ARB)", "Washington State Climate Commitment Act (WA)","UN's Clean Development Mechanism (CDM)"])
 
