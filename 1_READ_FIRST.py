@@ -240,6 +240,9 @@ st.markdown('''You can view all project documents by visiting the project links 
 * **Methodology (also called Protocol)** - defines the eligibility, emissions calculations, and monitoring requirements for specific project types to generate offset credits.
 ''')
 
+st.divider()
+
+#--- Thank You and Version
 st.markdown("*We wholeheartedly thank the UC Berkeley students who helped write the Python code to build this database from the downloaded registry data: **Riyya Ahmed, Raaed Kamran Muggo, Ameya Patkar, Xinyun Rong**.*")
 
 st.markdown("*Version 11*")
