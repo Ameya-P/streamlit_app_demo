@@ -27,47 +27,55 @@ st.markdown("To download the database, sign up to receive update notices, provid
 database_url = "https://gspp.berkeley.edu/faculty-and-impact/centers/cepp/projects/berkeley-carbon-trading-project/offsets-database"
 st.markdown("[https://gspp.berkeley.edu/faculty-and-impact/centers/cepp/projects/berkeley-carbon-trading-project/offsets-database](%s)" % database_url)
 
+st.divider()
+
 #--------------------
 st.header("DATABASE TABS")
 
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Projects", "Charts", "Map", "Table", "Credits by Vintage"])
+
 #---
-st.subheader("PROJECTS tab")
+tab1.subheader("PROJECTS tab")
 
-st.markdown("Lists all projects in all registries and can be filtered/sorted using drop-down menus. Filtered results are simultaneously viewable on the Charts and Map tabs.")
+tab1.markdown("Lists all projects in all registries and can be filtered/sorted using drop-down menus. Filtered results are simultaneously viewable on the Charts and Map tabs.")
 
-st.markdown('''* Black font indicates data directly sourced from the registries; blue font indicates information and data calculated/added by the Berkeley Carbon Trading Project.
+tab1.markdown('''* Black font indicates data directly sourced from the registries; blue font indicates information and data calculated/added by the Berkeley Carbon Trading Project.
 * Each offset credit nominally represents one metric tonne of CO2-equivalent reduced or removed from the atmosphere.
 * To clear all filters, click on the 'Data' menu and in the 'Sort & Filter' window, click 'Clear'. 
 ''')
 
 vrod_url = "https://gspp.berkeley.edu/assets/uploads/page/VROD-Calculations.pdf"
-st.markdown(":blue[All of our calculations are described in [VROD Calculations, linked here].](%s)" %vrod_url)
+tab1.markdown(":blue[All of our calculations are described in [VROD Calculations, linked here].](%s)" %vrod_url)
 
 #---
-st.subheader("CHARTS tab")
+tab2.subheader("CHARTS tab")
 
-st.markdown("View dynamic charts — use the column filters in PROJECTS tab to display filter results in the charts.")
-
-#---
-st.subheader("MAP tab")
-
-st.markdown("View the distribution of projects around the world by number of projects and by credits issued. Use the column filters in PROJECTS tab to display filter results upon this map.")
+tab2.markdown("View dynamic charts — use the column filters in PROJECTS tab to display filter results in the charts.")
 
 #---
-st.subheader("TABLE tab")
+tab3.subheader("MAP tab")
 
-st.markdown("Tallies projects, credits issued, and credits remaining by scope and type. Filter using the drop-down menus. Double click on any number to create a new tab with full information on all projects included in that row.")
+tab3.markdown("View the distribution of projects around the world by number of projects and by credits issued. Use the column filters in PROJECTS tab to display filter results upon this map.")
 
 #---
-st.subheader("CREDITS BY VINTAGE tab")
+tab4.subheader("TABLE tab")
 
-st.markdown("Dynamic generator allows comprehensive view of all credits issued, retired, and remaining by vintage for any project. Simply select a Project ID from the drop-down menu and project data & details will populate.")
+tab4.markdown("Tallies projects, credits issued, and credits remaining by scope and type. Filter using the drop-down menus. Double click on any number to create a new tab with full information on all projects included in that row.")
+
+#---
+tab5.subheader("CREDITS BY VINTAGE tab")
+
+tab5.markdown("Dynamic generator allows comprehensive view of all credits issued, retired, and remaining by vintage for any project. Simply select a Project ID from the drop-down menu and project data & details will populate.")
+
+st.divider()
 
 #--------------------
 st.header("REGISTRY DATA")
 
 zip_url = "https://gspp.berkeley.edu/research-and-impact/centers/cepp/projects/berkeley-carbon-trading-project/offsets-database"
 st.markdown("[Downloaded the registry files we used to built this database: VROD-v11-RegistryFiles.zip](%s)" %zip_url)
+
+st.divider()
 
 #--------------------
 st.header("MORE INFORMATION")
