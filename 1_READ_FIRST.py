@@ -8,7 +8,7 @@ st.set_page_config(
     page_icon=logo,
 )
 
-#--------------------
+#-------------------- Intro
 st.title("Voluntary Registry Offsets Database")
 
 st.markdown(":blue[Berkeley Carbon Trading Project's] Voluntary Registry Offsets Database contains all carbon offset projects listed globally by four major voluntary offset project registries: American Carbon Registry (ACR), Climate Action Reserve (CAR), Gold Standard, and Verra (VCS). These four registries generate almost all of the world's voluntary market offsets and include projects eligible for use under the California, Quebec, and Washington lcap-and-trade programs as well as UN Clean Development Mechanism projects that transitioned into one of the voluntary registries.")
@@ -29,47 +29,47 @@ st.markdown("[https://gspp.berkeley.edu/faculty-and-impact/centers/cepp/projects
 
 st.divider()
 
-#--------------------
+#-------------------- Database Tabs
 st.header("DATABASE TABS")
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Projects", "Charts", "Map", "Table", "Credits by Vintage"])
+db_tab1, db_tab2, db_tab3, db_tab4, db_tab5 = st.tabs(["Projects", "Charts", "Map", "Table", "Credits by Vintage"])
 
-#---
-tab1.subheader("PROJECTS tab")
+#--- Tab 1
+db_tab1.subheader("PROJECTS tab")
 
-tab1.markdown("Lists all projects in all registries and can be filtered/sorted using drop-down menus. Filtered results are simultaneously viewable on the Charts and Map tabs.")
+db_tab1.markdown("Lists all projects in all registries and can be filtered/sorted using drop-down menus. Filtered results are simultaneously viewable on the Charts and Map tabs.")
 
-tab1.markdown('''* Black font indicates data directly sourced from the registries; blue font indicates information and data calculated/added by the Berkeley Carbon Trading Project.
+db_tab1.markdown('''* Black font indicates data directly sourced from the registries; blue font indicates information and data calculated/added by the Berkeley Carbon Trading Project.
 * Each offset credit nominally represents one metric tonne of CO2-equivalent reduced or removed from the atmosphere.
 * To clear all filters, click on the 'Data' menu and in the 'Sort & Filter' window, click 'Clear'. 
 ''')
 
 vrod_url = "https://gspp.berkeley.edu/assets/uploads/page/VROD-Calculations.pdf"
-tab1.markdown(":blue[All of our calculations are described in [VROD Calculations, linked here].](%s)" %vrod_url)
+db_tab1.markdown(":blue[All of our calculations are described in [VROD Calculations, linked here].](%s)" %vrod_url)
 
-#---
-tab2.subheader("CHARTS tab")
+#--- Tab 2
+db_tab2.subheader("CHARTS tab")
 
-tab2.markdown("View dynamic charts — use the column filters in PROJECTS tab to display filter results in the charts.")
+db_tab2.markdown("View dynamic charts — use the column filters in PROJECTS tab to display filter results in the charts.")
 
-#---
-tab3.subheader("MAP tab")
+#--- Tab 3
+db_tab3.subheader("MAP tab")
 
-tab3.markdown("View the distribution of projects around the world by number of projects and by credits issued. Use the column filters in PROJECTS tab to display filter results upon this map.")
+db_tab3.markdown("View the distribution of projects around the world by number of projects and by credits issued. Use the column filters in PROJECTS tab to display filter results upon this map.")
 
-#---
-tab4.subheader("TABLE tab")
+#--- Tab 4
+db_tab4.subheader("TABLE tab")
 
-tab4.markdown("Tallies projects, credits issued, and credits remaining by scope and type. Filter using the drop-down menus. Double click on any number to create a new tab with full information on all projects included in that row.")
+db_tab4.markdown("Tallies projects, credits issued, and credits remaining by scope and type. Filter using the drop-down menus. Double click on any number to create a new tab with full information on all projects included in that row.")
 
-#---
-tab5.subheader("CREDITS BY VINTAGE tab")
+#--- Tab 5
+db_tab5.subheader("CREDITS BY VINTAGE tab")
 
-tab5.markdown("Dynamic generator allows comprehensive view of all credits issued, retired, and remaining by vintage for any project. Simply select a Project ID from the drop-down menu and project data & details will populate.")
+db_tab5.markdown("Dynamic generator allows comprehensive view of all credits issued, retired, and remaining by vintage for any project. Simply select a Project ID from the drop-down menu and project data & details will populate.")
 
 st.divider()
 
-#--------------------
+#-------------------- Registry Data
 st.header("REGISTRY DATA")
 
 zip_url = "https://gspp.berkeley.edu/research-and-impact/centers/cepp/projects/berkeley-carbon-trading-project/offsets-database"
@@ -77,75 +77,149 @@ st.markdown("[Downloaded the registry files we used to built this database: VROD
 
 st.divider()
 
-#--------------------
+#-------------------- More Information
 st.header("MORE INFORMATION")
 
-#---
+calc_url = "https://gspp.berkeley.edu/assets/uploads/page/VROD-Calculations.pdf"
+st.markdown("[Detailed Description of Calculations](%s)" %calc_url)
+
+cl_url = "https://gspp.berkeley.edu/assets/uploads/page/Change-Log--Voluntary-Registry-Offsets-Database.pdf"
+st.markdown("[Change Log, v11](%s)" %cl_url)
+
+type_url = "https://gspp.berkeley.edu/assets/uploads/page/VROD-ScopesTypes-v11.pdf"
+st.markdown("[Project Scopes & Type Descriptions](%s)" %type_url)
+
+vrod_db_url = "https://gspp.berkeley.edu/research-and-impact/centers/cepp/projects/berkeley-carbon-trading-project/offsets-database"
+st.markdown("[Voluntary Registry Offsets Database webpage](%s)" %vrod_db_url)
+
+bctp_url = "https://gspp.berkeley.edu/research-and-impact/centers/cepp/projects/berkeley-carbon-trading-project"
+st.markdown("[Berkeley Carbon Trading Project](%s)" %bctp_url)
+
+#--- Registry Tabs
+r_tab1, r_tab2, r_tab3, r_tab4, r_tab5, r_tab6, r_tab7 = st.tabs(["American Carbon Registry (ACR)", "Climate Action Reserve (CAR)", "Gold Standard (GS)", "Verified Carbon Standard (VCS)", "California Air Resources Board (ARB)", "Washington State Climate Commitment Act (WA)","UN's Clean Development Mechanism (CDM)"])
+
 st.subheader("*Registry data and project documents:*")
 
-#---
+#--- Tab 1
 st.subheader("American Carbon Registry (ACR)")
 
-#---
+acr_registry_url = "https://americancarbonregistry.org/"
+r_tab1.markdown("[Registry](%s)" %acr_registry_url)
+
+acr_projects_url = "https://acr2.apx.com/myModule/rpt/myrpt.asp?r=111"
+r_tab1.markdown("[Registered Projects](%s)" %acr_projects_url)
+
+acr_issued_url = "https://acr2.apx.com/myModule/rpt/myrpt.asp?r=112"
+r_tab1.markdown("[Credits Issued](%s)" %acr_issued_url)
+
+acr_retired_url = "https://acr2.apx.com/myModule/rpt/myrpt.asp?r=206"
+r_tab1.markdown("[Credits Retired](%s)" %acr_retired_url)
+
+acr_cancelled_url = "https://acr2.apx.com/myModule/rpt/myrpt.asp?r=208"
+r_tab1.markdown("[Credits Cancelled](%s)" %acr_cancelled_url)
+
+acr_buffer_url = "https://acr2.apx.com/myModule/rpt/myrpt.asp?r=209"
+r_tab1.markdown("[Buffer Pool](%s)" %acr_buffer_url)
+
+acr_status_url = "https://acr2.apx.com/myModule/rpt/myrpt.asp?r=309"
+r_tab1.markdown("[Credit Status](%s)" %acr_status_url)
+
+acr_methods_url = "https://acrcarbon.org/methodologies/approved-methodologies/"
+r_tab1.markdown("[Methodologies/Protocols](%s)" %acr_methods_url)
+
+#--- Tab 2
 st.subheader("Climate Action Reserve (CAR)")
 
-#---
+car_registry_url = "https://www.climateactionreserve.org/"
+r_tab2.markdown("[Registry](%s)" %car_registry_url)
+
+car_projects_url = "https://thereserve2.apx.com/myModule/rpt/myrpt.asp?r=111"
+r_tab2.markdown("[Registered Projects](%s)" %car_projects_url)
+
+car_issued_url = "https://thereserve2.apx.com/myModule/rpt/myrpt.asp?r=112"
+r_tab2.markdown("[Credits Issued](%s)" %car_issued_url)
+
+car_retired_url = "https://thereserve2.apx.com/myModule/rpt/myrpt.asp?r=206"
+r_tab2.markdown("[Credits Retired](%s)" %car_retired_url)
+
+car_cancelled_url = "https://thereserve2.apx.com/myModule/rpt/myrpt.asp?r=308"
+r_tab2.markdown("[Credits Cancelled](%s)" %car_cancelled_url)
+
+car_buffer_url = "https://thereserve2.apx.com/myModule/rpt/myrpt.asp?r=706"
+r_tab2.markdown("[Buffer Pool](%s)" %car_buffer_url)
+
+car_methods_url = "https://www.climateactionreserve.org/how/protocols/"
+r_tab2.markdown("[Methodologies/Protocols](%s)" %car_methods_url)
+
+#--- Tab 3
 st.subheader("Gold Standard (GS)")
 
-#---
-st.subheader("Verified Carbon Standard (VCS)")
+gs_registry_url = "https://www.goldstandard.org/"
+r_tab3.markdown("[Registry](%s)" %gs_registry_url)
+
+gs_projects_url = "https://registry.goldstandard.org/projects?q=&page=1"
+r_tab3.markdown("[Registered Projects](%s)" %gs_projects_url)
+
+gs_issued_url = "https://registry.goldstandard.org/credit-blocks?q=&page=1"
+r_tab3.markdown("[Credits Issued & Retired](%s)" %gs_issued_url)
+
+gs_methods_url = "https://globalgoals.goldstandard.org/"
+r_tab3.markdown("[Methodologies/Protocols](%s)" %gs_methods_url)
+
+#--- Tab 4
+r_tab4.subheader("Verified Carbon Standard (VCS)")
 
 vcs_registry_url = "https://registry.verra.org/"
-st.markdown("[Registry & Projects](%s)" %vcs_registry_url)
+r_tab4.markdown("[Registry & Projects](%s)" %vcs_registry_url)
 
 vcs_credits_url = "https://registry.verra.org/app/search/VCS"
-st.markdown("[Credits Issued & Retired](%s)" %vcs_credits_url)
+r_tab4.markdown("[Credits Issued & Retired](%s)" %vcs_credits_url)
 
 vcs_buffer_url = "https://registry.verra.org/app/search/VCS/All%20Projects"
-st.markdown("[Buffer Pool](%s)" %vcs_buffer_url)
+r_tab4.markdown("[Buffer Pool](%s)" %vcs_buffer_url)
 
 vcs_methods_url = "https://verra.org/methodologies-main/"
-st.markdown("[VCS Methodologies](%s)" %vcs_methods_url)
+r_tab4.markdown("[VCS Methodologies](%s)" %vcs_methods_url)
 
 vcs_cdm_url = "https://cdm.unfccc.int/methodologies/index.html"
-st.markdown("[CDM Methodologies](%s)" %vcs_cdm_url)
+r_tab4.markdown("[CDM Methodologies](%s)" %vcs_cdm_url)
 
-#---
-st.subheader("California Air Resources Board (ARB)")
+#--- Tab 5
+r_tab5.subheader("California Air Resources Board (ARB)")
 
 arb_registry_url = "https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program"
-st.markdown("[Registry](%s)" %arb_registry_url)
+r_tab5.markdown("[Registry](%s)" %arb_registry_url)
 
 arb_credits_url = "https://ww2.arb.ca.gov/resources/documents/arb-offset-credit-issuance-table"
-st.markdown("[Credits Issued & Retired](%s)" %arb_credits_url)
+r_tab5.markdown("[Credits Issued & Retired](%s)" %arb_credits_url)
 
 arb_protocols_url = "https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program/compliance-offset-protocols"
-st.markdown("[Protocols](%s)" %arb_protocols_url)
+r_tab5.markdown("[Protocols](%s)" %arb_protocols_url)
 
-#---
-st.subheader("Washington State Climate Commitment Act (WA)")
+#--- Tab 6
+r_tab6.subheader("Washington State Climate Commitment Act (WA)")
 
 wa_registry_url = "https://ecology.wa.gov/Air-Climate/Climate-Commitment-Act/Cap-and-invest/Offsets"
-st.markdown("[Registry](%s)" %wa_registry_url)
+r_tab6.markdown("[Registry](%s)" %wa_registry_url)
 
 wa_credits_url = "https://apps.ecology.wa.gov/publications/documents/2314026.pdf"
-st.markdown("[Credits Issued](%s)" %wa_credits_url)
+r_tab6.markdown("[Credits Issued](%s)" %wa_credits_url)
 
-#---
-st.subheader("UN's Clean Development Mechanism (CDM)")
+#--- Tab 7
+r_tab7.subheader("UN's Clean Development Mechanism (CDM)")
 
-st.markdown("Projects and credits issued under the :blue[UN's Clean Development Mechanism (CDM)] are only included in this voluntary registry offsets database if they have been transitioned to one of the voluntary registries.")
+r_tab7.markdown("Projects and credits issued under the :blue[UN's Clean Development Mechanism (CDM)] are only included in this voluntary registry offsets database if they have been transitioned to one of the voluntary registries.")
 
 un_url = "https://cdm.unfccc.int/"
-st.markdown("CDM projects can be found at the [UN's CDM website](%s)." %un_url)
+r_tab7.markdown("CDM projects can be found at the [UN's CDM website](%s)." %un_url)
 
 unep_url = "http://www.cdmpipeline.org/"
-st.markdown("CDM projects can also be found in the [UNEP's CDM Pipeline Database](%s)." %unep_url)
+r_tab7.markdown("CDM projects can also be found in the [UNEP's CDM Pipeline Database](%s)." %unep_url)
 
 cdm_url = "https://cdm.unfccc.int/methodologies/index.html"
-st.markdown("Some projects registered by voluntary registries use [CDM methodologies](%s). (These methodologies can be found with an online search for their name or ID.)" %cdm_url)
+r_tab7.markdown("Some projects registered by voluntary registries use [CDM methodologies](%s). (These methodologies can be found with an online search for their name or ID.)" %cdm_url)
 
-#---
+#--- Project Documents
 st.subheader("Project Documents:")
 
 st.markdown('''You can view all project documents by visiting the project links above and searching for the project ID or name (you may need to scroll right and look for the search box).
