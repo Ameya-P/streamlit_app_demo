@@ -5,8 +5,8 @@ from st_aggrid import GridOptionsBuilder
 import pandas as pd
 
 logo = Image.open("resources/berkeley_logo.png")
-
 st.set_page_config(
+    layout="wide",
     page_title="Voluntary Registry Offsets Database",
     page_icon=logo,
 )
@@ -36,8 +36,12 @@ st.divider()
 projects_tab = pd.read_csv("resources/v11.csv")
 
 builder = GridOptionsBuilder.from_dataframe(projects_tab)
-builder.configure_default_column(filterable = True, sorteable = True)
-builder.configure_auto_height()
+builder.configure_default_column(editable = True, sorteable = True)
+#builder.configure_auto_height()
+builder.configure_column(header_name = "Credits issued by issuance year (when the registry issued the credits)", 
+                         children = [{ "field": "1996_IV" },{ "field": "1997_IV" }]
+                         )
+
 go = builder.build()
 
 grid_options = {
