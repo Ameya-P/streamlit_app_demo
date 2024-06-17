@@ -36,26 +36,17 @@ st.divider()
 projects_tab = pd.read_csv("resources/v11.csv")
 
 builder = GridOptionsBuilder.from_dataframe(projects_tab)
-builder.configure_default_column(filter = True)
+
 builder.configure_auto_height()
 
 #------------------ MultiColumn Header
+basic_characteristics = []
+for col in projects_tab.columns[:14]:
+    basic_characteristics.append({"field": col})
+basic_characteristics.append({ "field": "First Year of Project (Vintage)"})
+
 builder.configure_column(field = "Basic Project Characteristics", 
-                         children = [{ "field": "Project ID" },
-                                     { "field": "Project Name" },
-                                     { "field": "Voluntary Registry" },
-                                     { "field": "ARB/WA Project" },
-                                     { "field": "Voluntary Status" },
-                                     { "field": "Scope" },
-                                     { "field": "Type" },
-                                     { "field": "Reduction / Removal" },
-                                     { "field": "Methodology / Protocol" },
-                                     { "field": "Region" },
-                                     { "field": "Country" },
-                                     { "field": "State" },
-                                     { "field": "Project Site Location" },
-                                     { "field": "Project Developer" },
-                                     { "field": "First Year of Project (Vintage)"}]
+                         children = basic_characteristics
                          )
 
 builder.configure_column(field = "Credit Totals", 
