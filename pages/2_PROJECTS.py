@@ -36,7 +36,8 @@ st.divider()
 projects_tab = pd.read_csv("resources/v11.csv")
 
 builder = GridOptionsBuilder.from_dataframe(projects_tab)
-builder.configure_pagination()
+builder.configure_default_column(filterable = True, sorteable = True)
+builder.configure_auto_height
 go = builder.build()
 
 grid_options = {
