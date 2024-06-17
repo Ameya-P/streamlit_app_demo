@@ -39,9 +39,6 @@ builder = GridOptionsBuilder.from_dataframe(projects_tab)
 #builder.configure_default_column(editable = True, sorteable = True)
 #builder.configure_auto_height()
 
-#------------------ Hide columns that aren't formatted properly
-builder.configure_default_column(hidden = True)
-
 #------------------ MultiColumn Header
 builder.configure_column(field = "Basic Project Characteristics", 
                          children = [{ "field": "Project ID" },
@@ -226,5 +223,9 @@ builder.configure_column(field = "Additional Project Characteristics",
                         )
 
 go = builder.build()
+
+#------------------ Hide columns that aren't formatted properly
+options_list = go.get('columnDefs')
+go['columnDefs'] = options_list[158:] #158 = number of columns in original data table
 
 grid_return = AgGrid(projects_tab, go)
