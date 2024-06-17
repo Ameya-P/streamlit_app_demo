@@ -38,7 +38,7 @@ projects_tab = pd.read_csv("resources/v11.csv")
 builder = GridOptionsBuilder.from_dataframe(projects_tab)
 builder.configure_default_column(editable = True, sorteable = True)
 #builder.configure_auto_height()
-builder.configure_column(header_name = "Credits issued by issuance year (when the registry issued the credits)", 
+builder.configure_column(field = "Credits issued by issuance year (when the registry issued the credits)", 
                          children = [{ "field": "1996_IV" },{ "field": "1997_IV" }]
                          )
 
