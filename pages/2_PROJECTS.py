@@ -36,8 +36,8 @@ st.divider()
 projects_tab = pd.read_csv("resources/v11.csv")
 
 builder = GridOptionsBuilder.from_dataframe(projects_tab)
-#builder.configure_default_column(editable = True, sorteable = True)
-#builder.configure_auto_height()
+builder.configure_default_column(filter = True)
+builder.configure_auto_height()
 
 #------------------ MultiColumn Header
 builder.configure_column(field = "Basic Project Characteristics", 
