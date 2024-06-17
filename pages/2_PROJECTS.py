@@ -40,27 +40,7 @@ builder = GridOptionsBuilder.from_dataframe(projects_tab)
 #builder.configure_auto_height()
 
 #------------------ Hide columns that aren't formatted properly
-builder.configure_columns(column_names = ["Project ID", "Project Name", "Voluntary Registry", "ARB/WA Project", "Voluntary Status", "Scope", 
-                                          " Type", "Reduction / Removal", "Methodology / Protocol", "Region", "Country", "State", "Project Site Location", 
-                                          "Project Developer", "Total Credits Issued", "Total Credits Retired", "Total Credits Remaining", 
-                                          "Total Buffer Pool Deposits", "Reversals Covered by Buffer Pool", "Reversals Not Covered by Buffer", 
-                                          "First Year of Project (Vintage)", "1996_IV", "1997_IV", "1998_IV", "1999_IV", "2000_IV", "2001_IV", 
-                                          "2002_IV", "2003_IV", "2004_IV", "2005_IV", "2006_IV", "2007_IV", "2008_IV", "2009_IV", "2010_IV", "2011_IV", 
-                                          "2012_IV", "2013_IV", "2014_IV", "2015_IV", "2016_IV", "2017_IV", "2018_IV", "2019_IV", "2020_IV", "2021_IV", 
-                                          "2022_IV", "2023_IV", "2024_IV", "1996_C", "1997_C", "1998_C", "1999_C", "2000_C", "2001_C", "2002_C", "2003_C", 
-                                          "2004_C", "2005_C", "2006_C", "2007_C", "2008_C", "2009_C", "2010_C", "2011_C", "2012_C", "2013_C", "2014_C", 
-                                          "2015_C", "2016_C", "2017_C", "2018_C", "2019_C", "2020_C", "2021_C", "2022_C", "2023_C", "2024_C", 
-                                          "Year Unknown_C", "1996_R", "1997_R", "1998_R", "1999_R", "2000_R", "2001_R", "2002_R", "2003_R", "2004_R", 
-                                          "2005_R", "2006_R", "2007_R", "2008_R", "2009_R", "2010_R", "2011_R", "2012_R", "2013_R", "2014_R", "2015_R", "2016_R", 
-                                          "2017_R", "2018_R", "2019_R", "2020_R", "2021_R", "2022_R", "2023_R", "2024_R", "Project Owner ", 
-                                          "Offset Project Operator ", "Authorized Project Designee", "Verifier", "Estimated Annual Emission Reductions", " PERs ", 
-                                          "Registry / ARB / WA", "ARB Project Detail", "ARB ID", "PoA ID/Aggregate ID", "CORSIA Eligible", "Project Listed", 
-                                          "Project Registered ", "CCB / Certifications", "Project Type From the Registry", "Registry Documents", "Project Website", 
-                                          "1996_II", "1997_II", "1998_II", "1999_II", "2000_II", "2001_II", "2002_II", "2003_II", "2004_II", "2005_II", "2006_II", "2007_II", 
-                                          "2008_II", "2009_II", "2010_II", "2011_II", "2012_II", "2013_II", "2014_II", "2015_II", "2016_II", "2017_II", "2018_II", "2019_II", 
-                                          "2020_II", "2021_II", "2022_II", "2023_II", "2024_II", "Notes from Registry", "Notes from Berkeley Carbon Trading Project", 
-                                          "Added to Database Version - With Data Through"], 
-                                          lock_visible = True)
+builder.configure_default_column(hidden = True)
 
 #------------------ MultiColumn Header
 builder.configure_column(field = "Basic Project Characteristics", 
