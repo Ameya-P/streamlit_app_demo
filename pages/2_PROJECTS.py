@@ -1,6 +1,7 @@
 from PIL import Image
 import streamlit as st
 from st_aggrid import AgGrid
+from st_aggrid import GridOptionsBuilder
 import pandas as pd
 
 logo = Image.open("resources/berkeley_logo.png")
@@ -33,6 +34,10 @@ st.divider()
 
 #------------------ Dataframe
 projects_tab = pd.read_csv("resources/v11.csv")
+
+builder = GridOptionsBuilder.from_dataframe(projects_tab)
+builder.configure_pagination()
+go = builder.build()
 
 grid_options = {
 "columnDefs": [
@@ -73,4 +78,4 @@ grid_options = {
 ]
 }
 
-grid_return = AgGrid(projects_tab, grid_options)
+grid_return = AgGrid(projects_tab, go)
