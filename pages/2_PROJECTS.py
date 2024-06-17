@@ -41,86 +41,44 @@ builder.configure_auto_height()
 
 #------------------ MultiColumn Header
 basic_characteristics = []
+
 for col in projects_tab.columns[:14]:
-    basic_characteristics.append({"field": col})
+    basic_characteristics.append({"field": col, "filter": True})
+
 basic_characteristics.append({ "field": "First Year of Project (Vintage)"})
 
 builder.configure_column(field = "Basic Project Characteristics", 
                          children = basic_characteristics
                          )
 
+#---
+totals = []
+
+for col in projects_tab.columns[14:20]:
+    totals.append({"field": col, "filter": True})
+    
 builder.configure_column(field = "Credit Totals", 
-                         children = [{ "field": "Total Credits Issued" },
-                                     { "field": "Total Credits Retired" },
-                                     { "field": "Total Credits Remaining" },
-                                     { "field": "Total Buffer Pool Deposits" },
-                                     { "field": "Reversals Covered by Buffer Pool" },
-                                     { "field": "Reversals Not Covered by Buffer" }]
-                         )
-				 							
+                         children = totals)
+
+#---	
+issued_vintage = []
+
+for col in projects_tab.columns[21:50]:
+    issued_vintage.append({"field": col, "headerName": col[0:4], "filter": True})
+    
+	 							
 builder.configure_column(field = "Credits issued by vintage year (when reduction/removals occurred)", 
-                         children = [{ "field": "1996_IV" },
-                                     { "field": "1997_IV" },
-                                     { "field": "1998_IV" },
-                                     { "field": "1999_IV" },
-                                     { "field": "2000_IV" },
-                                     { "field": "2001_IV" },
-                                     { "field": "2002_IV" },
-                                     { "field": "2003_IV" },
-                                     { "field": "2004_IV" },
-                                     { "field": "2005_IV" },
-                                     { "field": "2006_IV" },
-                                     { "field": "2007_IV" },
-                                     { "field": "2008_IV" },
-                                     { "field": "2009_IV" },
-                                     { "field": "2010_IV" },
-                                     { "field": "2011_IV" },
-                                     { "field": "2012_IV" },
-                                     { "field": "2013_IV" },
-                                     { "field": "2014_IV" },
-                                     { "field": "2015_IV" },
-                                     { "field": "2016_IV" },
-                                     { "field": "2017_IV" },
-                                     { "field": "2018_IV" },
-                                     { "field": "2019_IV" },
-                                     { "field": "2020_IV" },
-                                     { "field": "2021_IV" },
-                                     { "field": "2022_IV" },
-                                     { "field": "2023_IV" },
-                                     { "field": "2024_IV" }]
+                         children = issued_vintage
                          )
 
+#---
+cancelled = []
+
+for col in projects_tab.columns[21:50]:
+    cancelled.append({"field": col, "headerName": col[0:4], "filter": True})
+
 builder.configure_column(field = "Credits retired or cancelled in",
-                        children = [{ "field": "1996_C" },
-                                    { "field": "1997_C" },
-                                    { "field": "1998_C" },
-                                    { "field": "1999_C" },
-                                    { "field": "2000_C" },
-                                    { "field": "2001_C" },
-                                    { "field": "2002_C" },
-                                    { "field": "2003_C" },
-                                    { "field": "2004_C" },
-                                    { "field": "2005_C" },
-                                    { "field": "2006_C" },
-                                    { "field": "2007_C" },
-                                    { "field": "2008_C" },
-                                    { "field": "2009_C" },
-                                    { "field": "2010_C" },
-                                    { "field": "2011_C" },
-                                    { "field": "2012_C" },
-                                    { "field": "2013_C" },
-                                    { "field": "2014_C" },
-                                    { "field": "2015_C" },
-                                    { "field": "2016_C" },
-                                    { "field": "2017_C" },
-                                    { "field": "2018_C" },
-                                    { "field": "2019_C" },
-                                    { "field": "2020_C" },
-                                    { "field": "2021_C" },
-                                    { "field": "2022_C" },
-                                    { "field": "2023_C" },
-                                    { "field": "2024_C" },
-                                    { "field": "Year Unknown_C" }]
+                        children = cancelled
                         )
 
 builder.configure_column(field = "Credits remaining by vintage",
