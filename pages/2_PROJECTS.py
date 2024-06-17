@@ -1,5 +1,6 @@
 from PIL import Image
 import streamlit as st
+from st_aggrid import AgGrid
 import pandas as pd
 
 logo = Image.open("resources/berkeley_logo.png")
@@ -33,4 +34,43 @@ st.divider()
 #------------------ Dataframe
 projects_tab = pd.read_csv("resources/v11.csv")
 
-st.dataframe(projects_tab)
+grid_options = {
+"columnDefs": [
+{
+"headerName": "Credits issued by issuance year (when the registry issued the credits)",
+"children": [
+{ "field": "1996_IV" },
+{ "field": "1997_IV" },
+{ "field": "1998_IV" },
+{ "field": "1999_IV" },
+{ "field": "2000_IV" },
+{ "field": "2001_IV" },
+{ "field": "2002_IV" },
+{ "field": "2003_IV" },
+{ "field": "2004_IV" },
+{ "field": "2005_IV" },
+{ "field": "2006_IV" },
+{ "field": "2007_IV" },
+{ "field": "2008_IV" },
+{ "field": "2009_IV" },
+{ "field": "2010_IV" },
+{ "field": "2011_IV" },
+{ "field": "2012_IV" },
+{ "field": "2013_IV" },
+{ "field": "2014_IV" },
+{ "field": "2015_IV" },
+{ "field": "2016_IV" },
+{ "field": "2017_IV" },
+{ "field": "2018_IV" },
+{ "field": "2019_IV" },
+{ "field": "2020_IV" },
+{ "field": "2021_IV" },
+{ "field": "2022_IV" },
+{ "field": "2023_IV" },
+{ "field": "2024_IV" }
+    ]
+}
+]
+}
+
+grid_return = AgGrid(projects_tab, grid_options)
