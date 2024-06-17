@@ -132,7 +132,7 @@ builder.configure_column(field = "Credits retired or cancelled in",
                                     { "field": "Year Unknown_C" }]
                         )
 
-builder.configure_Rolumn(field = "Credits remaining by vintage",
+builder.configure_column(field = "Credits remaining by vintage",
                         children = [{ "field": "1996_R" },
                                     { "field": "1997_R" },
                                     { "field": "1998_R" },
