@@ -37,7 +37,7 @@ projects_tab = pd.read_csv("resources/v11.csv")
 
 builder = GridOptionsBuilder.from_dataframe(projects_tab)
 
-builder.configure_auto_height()
+builder.configure_auto_height(autoHeight = True)
 
 #------------------ MultiColumn Header
 basic_characteristics = []
@@ -71,104 +71,54 @@ builder.configure_column(field = "Credits issued by vintage year (when reduction
                          children = issued_vintage
                          )
 
-#---
+#--- 
 cancelled = []
 
-for col in projects_tab.columns[21:50]:
+for col in projects_tab.columns[50:80]:
     cancelled.append({"field": col, "headerName": col[0:4], "filter": True})
 
 builder.configure_column(field = "Credits retired or cancelled in",
                         children = cancelled
                         )
 
+#--
+remaining = []
+
+for col in projects_tab.columns[80:109]:
+    remaining.append({"field": col, "headerName": col[0:4], "filter": True})
+
 builder.configure_column(field = "Credits remaining by vintage",
-                        children = [{ "field": "1996_R" },
-                                    { "field": "1997_R" },
-                                    { "field": "1998_R" },
-                                    { "field": "1999_R" },
-                                    { "field": "2000_R" },
-                                    { "field": "2001_R" },
-                                    { "field": "2002_R" },
-                                    { "field": "2003_R" },
-                                    { "field": "2004_R" },
-                                    { "field": "2005_R" },
-                                    { "field": "2006_R" },
-                                    { "field": "2007_R" },
-                                    { "field": "2008_R" },
-                                    { "field": "2009_R" },
-                                    { "field": "2010_R" },
-                                    { "field": "2011_R" },
-                                    { "field": "2012_R" },
-                                    { "field": "2013_R" },
-                                    { "field": "2014_R" },
-                                    { "field": "2015_R" },
-                                    { "field": "2016_R" },
-                                    { "field": "2017_R" },
-                                    { "field": "2018_R" },
-                                    { "field": "2019_R" },
-                                    { "field": "2020_R" },
-                                    { "field": "2021_R" },
-                                    { "field": "2022_R" },
-                                    { "field": "2023_R" },
-                                    { "field": "2024_R" }]
+                        children = remaining
                         )
+
+#--
+additional = []
+
+for col in projects_tab.columns[109:126]:
+    additional.append({"field": col, "filter": True})
 
 builder.configure_column(field = "Additional Project Characteristics",
-                        children = [{ "field": "Project Owner" },
-                                    { "field": "Offset Project Operator" },
-                                    { "field": "Authorized Project Designee" },
-                                    { "field": "Verifier" },
-                                    { "field": "Estimated Annual Emission Reductions" },
-                                    { "field": "PERs" },
-                                    { "field": "Registry / ARB / WA" },
-                                    { "field": "ARB Project Detail" },
-                                    { "field": "ARB ID" },
-                                    { "field": "PoA ID/Aggregate ID" },
-                                    { "field": "CORSIA Eligible" },
-                                    { "field": "Project Listed" },
-                                    { "field": "Project Registered" },
-                                    { "field": "CCB / Certifications" },
-                                    { "field": "Project Type From the Registry"},
-                                    { "field": "Registry Documents"},
-                                    { "field": "Project Website"}]
+                        children = additional
                         )
 
+#--
+issued_issuance = []
+
+for col in projects_tab.columns[126:155]:
+    issued_issuance.append({"field": col, "headerName": col[0:4], "filter": True})
+    
 builder.configure_column(field = "Credits issued by issuance year (when the registry issued the credits)",
-                        children = [{ "field": "1996_II", "headerName": "1996"},
-                                    { "field": "1997_II", "headerName": "1997" },
-                                    { "field": "1998_II", "headerName": "1998" },
-                                    { "field": "1999_II", "headerName": "1999" },
-                                    { "field": "2000_II", "headerName": "2000" },
-                                    { "field": "2001_II", "headerName": "2001" },
-                                    { "field": "2002_II", "headerName": "2002" },
-                                    { "field": "2003_II", "headerName": "2003" },
-                                    { "field": "2004_II", "headerName": "2004" },
-                                    { "field": "2005_II", "headerName": "2005" },
-                                    { "field": "2006_II", "headerName": "2006" },
-                                    { "field": "2007_II", "headerName": "2007" },
-                                    { "field": "2008_II", "headerName": "2008" },
-                                    { "field": "2009_II", "headerName": "2009" },
-                                    { "field": "2010_II", "headerName": "2010" },
-                                    { "field": "2011_II", "headerName": "2011" },
-                                    { "field": "2012_II", "headerName": "2012" },
-                                    { "field": "2013_II", "headerName": "2013" },
-                                    { "field": "2014_II", "headerName": "2014" },
-                                    { "field": "2015_II", "headerName": "2015" },
-                                    { "field": "2016_II", "headerName": "2016" },
-                                    { "field": "2017_II", "headerName": "2017" },
-                                    { "field": "2018_II", "headerName": "2018" },
-                                    { "field": "2019_II", "headerName": "2019" },
-                                    { "field": "2020_II", "headerName": "2020" },
-                                    { "field": "2021_II", "headerName": "2021" },
-                                    { "field": "2022_II", "headerName": "2022" },
-                                    { "field": "2023_II", "headerName": "2023" },
-                                    { "field": "2024_II", "headerName": "2024" }]
+                        children = issued_issuance
                         )
 
+#--
+notes = []
+
+for col in projects_tab.columns[155:158]:
+    notes.append({"field": col, "filter": True})
+
 builder.configure_column(field = "Additional Project Characteristics",
-                        children = [{ "field": "Notes from Registry" },
-                                    { "field": "Notes from Berkeley Carbon Trading Project" },
-                                    { "field": "Added to Database Version - With Data Through" }]
+                        children = notes
                         )
 
 go = builder.build()
