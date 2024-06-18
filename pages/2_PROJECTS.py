@@ -116,7 +116,7 @@ notes = []
 for col in projects_tab.columns[155:158]:
     notes.append({"field": col, "filter": True})
 
-builder.configure_column(field = "Additional Project Characteristics",
+builder.configure_column(field = "Notes",
                         children = notes
                         )
 
