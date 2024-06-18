@@ -126,5 +126,5 @@ go = builder.build()
 options_list = go.get('columnDefs')
 go['columnDefs'] = options_list[158:] #158 = number of columns in original data table
 
-grid_return = AgGrid(dataframe = projects_tab, grid_option = go, height = 800, update_mode = GridUpdateMode.FILTERING_CHANGED)
+grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED)
 
