@@ -2,6 +2,7 @@ from PIL import Image
 import streamlit as st
 from st_aggrid import AgGrid
 from st_aggrid import GridOptionsBuilder
+from st_aggrid import GridUpdateMode
 import pandas as pd
 
 logo = Image.open("resources/berkeley_logo.png")
@@ -36,8 +37,6 @@ st.divider()
 projects_tab = pd.read_csv("resources/v11.csv")
 
 builder = GridOptionsBuilder.from_dataframe(projects_tab)
-
-builder.configure_auto_height(autoHeight = True)
 
 #------------------ MultiColumn Header
 basic_characteristics = []
@@ -127,4 +126,5 @@ go = builder.build()
 options_list = go.get('columnDefs')
 go['columnDefs'] = options_list[158:] #158 = number of columns in original data table
 
-grid_return = AgGrid(projects_tab, go)
+grid_return = AgGrid(dataframe = projects_tab, gridOption = go, height = 800, update_mode = GridUpdateMode.FILTERING_CHANGED)
+
