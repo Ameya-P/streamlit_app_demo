@@ -145,8 +145,9 @@ data = []
 i = 0
 
 #-- Basic Project Characteristics
-for item in range(0,158):
-    data.append("")
+df = grid_return.data
+for item in df.columns:
+    data.append(grid_return[item])
 
 red_totals = pd.DataFrame([data], columns = names)
 
