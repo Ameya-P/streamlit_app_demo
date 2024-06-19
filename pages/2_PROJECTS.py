@@ -124,15 +124,16 @@ go = builder.build()
 
 #------------------ 
 def sum_col(df):
+    df.fillna(0)
     total_sum = 0
     columnData = df.items()
     for index, value in columnData:
         if type(value) == type("string"):
-            if value == " ":
+            if value == " " or value == "":
                 total_sum += 0
             else:
                 total_sum += int(value.replace(",", ""))
-        else:
+        else if value =:
             total_sum += value
     
     return total_sum
