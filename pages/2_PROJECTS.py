@@ -155,4 +155,4 @@ red_totals = pd.DataFrame([data], columns = names)
 go['pinnedTopRowData'] = red_totals.to_dict(orient="records")
 
 #----------------
-grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED, data_return_mode = DataReturnMode.FILTERED_AND_SORTED)
+grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED)
