@@ -194,12 +194,12 @@ for i in range(2,13):
 data.append("Totals for visible projects:")
 
 for i in range(14,20):
-    data.append(df[i].sum())
+    data.append(df.iloc[:, i].sum())
 
 data.append("")
 
 for i in range(21,109):
-    data.append(df[i].sum())
+    data.append(df.iloc[:, i].sum())
 
 for i in range(109,114):
     data.append("")
@@ -210,7 +210,7 @@ for i in range(115,126):
     data.append("")
 
 for i in range(126,155):
-    data.append(df[i].sum())
+    data.append(df.iloc[:, i].sum())
 
 for i in range(155,158):
     data.append("")
