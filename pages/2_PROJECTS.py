@@ -127,6 +127,9 @@ def sum_col(df):
     total_sum = 0
     columnData = df.items()
     for index, value in columnData:
+        if type(value) == 'str':
+            value.replace(",", "")
+
         total_sum += int(value)
     
     return total_sum
