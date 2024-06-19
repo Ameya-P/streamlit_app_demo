@@ -126,8 +126,8 @@ go = builder.build()
 def sum_col(df):
     total_sum = 0
     columnData = df.items()
-    for item in columnData:
-        total_sum += int(item)
+    for index, value in columnData:
+        total_sum += int(value)
     
     return total_sum
 
