@@ -160,7 +160,7 @@ i = 0
 #-- Basic Project Characteristics
 df = projects_tab
 
-data.append("All " + str(df.count) + " offset projects are visible")
+data.append("All " + str(len(df.index)) + " offset projects are visible")
 for i in range(2,13):
     data.append("")
 
@@ -190,6 +190,7 @@ for i in range(155,158):
 
 red_totals = pd.DataFrame([data], columns = names)
 
+print(data)
 #--- Pinned Top Row
 go['pinnedTopRowData'] = red_totals.to_dict(orient="records")
 
@@ -203,7 +204,7 @@ i = 0
 #-- Basic Project Characteristics
 df = grid_return["data"]
 
-data.append("All " + str(df.count) + " offset projects are visible")
+data.append("All " + str(len(df.index)) + " offset projects are visible")
 for i in range(2,13):
     data.append("")
 
