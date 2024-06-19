@@ -4,6 +4,7 @@ from st_aggrid import AgGrid
 from st_aggrid import GridOptionsBuilder
 from st_aggrid import GridUpdateMode, DataReturnMode
 import pandas as pd
+import numpy as np
 
 logo = Image.open("resources/berkeley_logo.png")
 st.set_page_config(
@@ -124,7 +125,7 @@ go = builder.build()
 
 #------------------ 
 def sum_col(df):
-    df.fillna(0)
+    
     total_sum = 0
     columnData = df.items()
     for index, value in columnData:
@@ -160,6 +161,7 @@ i = 0
 
 #-- Basic Project Characteristics
 df = projects_tab
+df.fillna(0, inplace=True)
 
 data.append("All " + str(len(df.index)) + " offset projects are visible")
 for i in range(2,13):
@@ -191,7 +193,6 @@ for i in range(155,158):
 
 red_totals = pd.DataFrame([data], columns = names)
 
-print(data)
 #--- Pinned Top Row
 go['pinnedTopRowData'] = red_totals.to_dict(orient="records")
 
@@ -204,6 +205,7 @@ i = 0
 
 #-- Basic Project Characteristics
 df = grid_return["data"]
+df.fillna(0, inplace=True)
 
 data.append("All " + str(len(df.index)) + " offset projects are visible")
 for i in range(2,13):
