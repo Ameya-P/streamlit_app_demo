@@ -145,11 +145,7 @@ data = []
 i = 0
 
 #-- Basic Project Characteristics
-for item in range(0,14):
-    data.append("")
-
-#-- Credit Totals
-for item in range(14,20):
+for item in range(0,158):
     data.append("")
 
 red_totals = pd.DataFrame([data], columns = names)
@@ -157,4 +153,5 @@ red_totals = pd.DataFrame([data], columns = names)
 #--- Pinned Top Row
 go['pinnedTopRowData'] = red_totals.to_dict(orient="records")
 
+#----------------
 grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED, data_return_mode = DataReturnMode.FILTERED_AND_SORTED)
