@@ -122,6 +122,16 @@ builder.configure_column(field = "Notes",
 
 go = builder.build()
 
+#------------------ 
+def sum_col(df):
+    total_sum = 0
+    columnData = df.iteritems()[1]
+    for item in columnData:
+        total_sum += int(item)
+    
+    return total_sum
+
+
 #------------------ Hide columns that aren't formatted properly
 options_list = go.get('columnDefs')
 go['columnDefs'] = options_list[158:] #158 = number of columns in original data table
@@ -151,12 +161,12 @@ for i in range(2,13):
 data.append("Totals for visible projects:")
 
 for i in range(14,20):
-    data.append(df.iloc[:, i].sum())
+    data.append(sum_col(df.iloc[:, i]))
 
 data.append("")
 
 for i in range(21,109):
-    data.append(df.iloc[:, i].sum())
+    data.append(sum_col(df.iloc[:, i]))
 
 for i in range(109,114):
     data.append("")
@@ -167,7 +177,7 @@ for i in range(115,126):
     data.append("")
 
 for i in range(126,155):
-    data.append(df.iloc[:, i].sum())
+    data.append(sum_col(df.iloc[:, i]))
 
 for i in range(155,158):
     data.append("")
@@ -194,12 +204,12 @@ for i in range(2,13):
 data.append("Totals for visible projects:")
 
 for i in range(14,20):
-    data.append(df.iloc[:, i].sum())
+    data.append(sum_col(df.iloc[:, i]))
 
 data.append("")
 
 for i in range(21,109):
-    data.append(df.iloc[:, i].sum())
+    data.append(sum_col(df.iloc[:, i]))
 
 for i in range(109,114):
     data.append("")
@@ -210,7 +220,7 @@ for i in range(115,126):
     data.append("")
 
 for i in range(126,155):
-    data.append(df.iloc[:, i].sum())
+    data.append(sum_col(df.iloc[:, i]))
 
 for i in range(155,158):
     data.append("")
