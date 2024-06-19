@@ -127,7 +127,7 @@ def sum_col(df):
     total_sum = 0
     columnData = df.items()
     for index, value in columnData:
-        total_sum += float(value)
+        total_sum += int(value)
     
     return total_sum
 
