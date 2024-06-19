@@ -133,7 +133,7 @@ def sum_col(df):
                 total_sum += 0
             else:
                 total_sum += int(value.replace(",", ""))
-        else if value =:
+        else:
             total_sum += value
     
     return total_sum
