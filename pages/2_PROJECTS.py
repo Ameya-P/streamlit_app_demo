@@ -174,7 +174,7 @@ for i in range(21,109):
 for i in range(109,114):
     data.append("")
 
-data.append(df[114].sum())
+data.append(sum_col(df.iloc[:, 114]))
 
 for i in range(115,126):
     data.append("")
@@ -217,7 +217,7 @@ for i in range(21,109):
 for i in range(109,114):
     data.append("")
 
-data.append(df[114].sum())
+data.append(sum_col(df.iloc[:, 114]))
 
 for i in range(115,126):
     data.append("")
