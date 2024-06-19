@@ -12,3 +12,5 @@ for col in df.columns:
     string = string + '"' + col + '", '
 
 print(string) """
+
+print(type("value") == type("string"))
