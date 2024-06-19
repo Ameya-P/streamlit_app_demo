@@ -130,7 +130,7 @@ def sum_col(df):
         if type(value) == type("string"):
             value.replace(",", "")
 
-        total_sum += int(value)
+        total_sum += int(value.replace(",", ""))
     
     return total_sum
 

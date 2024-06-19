@@ -13,4 +13,5 @@ for col in df.columns:
 
 print(string) """
 
-print(type("value") == type("string"))
+print(type('7,984,006') == type("string"))
+int('7,984,006'.replace(",", ""))
