@@ -138,13 +138,39 @@ names = ["Project ID", "Project Name", "Voluntary Registry", "ARB/WA Project", "
                                             "2004_II", "2005_II", "2006_II", "2007_II", "2008_II", "2009_II", "2010_II", "2011_II", "2012_II", "2013_II", "2014_II", "2015_II", "2016_II", "2017_II", "2018_II", "2019_II", "2020_II", "2021_II", "2022_II", "2023_II", "2024_II",
                                             "Notes from Registry", "Notes from Berkeley Carbon Trading Project", "Added to Database Version - With Data Through"]
 
-data = []
+data = [""]
 i = 0
 
 #-- Basic Project Characteristics
-df = grid_return.data
-for item in df.columns:
-    data.append(df[item][0])
+df = projects_tab
+
+data.append("All " + str(df.count) + " offset projects are visible")
+for i in range(2,13):
+    data.append("")
+
+data.append("Totals for visible projects:")
+
+for i in range(14,20):
+    data.append(df[i].sum())
+
+data.append("")
+
+for i in range(21,109):
+    data.append(df[i].sum())
+
+for i in range(109,114):
+    data.append("")
+
+data.append(df[114].sum())
+
+for i in range(115,126):
+    data.append("")
+
+for i in range(126,155):
+    data.append(df[i].sum())
+
+for i in range(155,158):
+    data.append("")
 
 red_totals = pd.DataFrame([data], columns = names)
 
@@ -153,3 +179,43 @@ go['pinnedTopRowData'] = red_totals.to_dict(orient="records")
 
 #------------------ Final Table
 grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED, data_return_mode = DataReturnMode.FILTERED_AND_SORTED)
+
+#------------------ Totals Table
+data = [""]
+i = 0
+
+#-- Basic Project Characteristics
+df = grid_return["data"]
+
+data.append("All " + str(df.count) + " offset projects are visible")
+for i in range(2,13):
+    data.append("")
+
+data.append("Totals for visible projects:")
+
+for i in range(14,20):
+    data.append(df[i].sum())
+
+data.append("")
+
+for i in range(21,109):
+    data.append(df[i].sum())
+
+for i in range(109,114):
+    data.append("")
+
+data.append(df[114].sum())
+
+for i in range(115,126):
+    data.append("")
+
+for i in range(126,155):
+    data.append(df[i].sum())
+
+for i in range(155,158):
+    data.append("")
+
+red_totals = pd.DataFrame([data], columns = names)
+
+#------------------ Final Table
+grid_return = AgGrid(red_totals, go, update_mode = GridUpdateMode.FILTERING_CHANGED, data_return_mode = DataReturnMode.FILTERED_AND_SORTED)
