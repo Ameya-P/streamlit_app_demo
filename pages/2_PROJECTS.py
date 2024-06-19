@@ -128,11 +128,7 @@ go['columnDefs'] = options_list[158:] #158 = number of columns in original data 
 
 
 #------------------ Totals 
-data = []
-for i in range(0,158):
-    data.append(i)
-
-red_totals = pd.DataFrame(data, columns = ["Project ID", "Project Name", "Voluntary Registry", "ARB/WA Project", "Voluntary Status", "Scope", " Type", "Reduction / Removal", "Methodology / Protocol", "Region", "Country", "State", "Project Site Location", "Project Developer",
+names = ["Project ID", "Project Name", "Voluntary Registry", "ARB/WA Project", "Voluntary Status", "Scope", " Type", "Reduction / Removal", "Methodology / Protocol", "Region", "Country", "State", "Project Site Location", "Project Developer",
                                             "Total Credits Issued", "Total Credits Retired", "Total Credits Remaining", "Total Buffer Pool Deposits", "Reversals Covered by Buffer Pool", "Reversals Not Covered by Buffer", "First Year of Project (Vintage)", "1996_IV", "1997_IV",
                                             "1998_IV", "1999_IV", "2000_IV", "2001_IV", "2002_IV", "2003_IV", "2004_IV", "2005_IV", "2006_IV", "2007_IV", "2008_IV", "2009_IV", "2010_IV", "2011_IV", "2012_IV", "2013_IV", "2014_IV", "2015_IV", "2016_IV", "2017_IV", "2018_IV",
                                             "2019_IV", "2020_IV", "2021_IV", "2022_IV", "2023_IV", "2024_IV", "1996_C", "1997_C", "1998_C", "1999_C", "2000_C", "2001_C", "2002_C", "2003_C", "2004_C", "2005_C", "2006_C", "2007_C", "2008_C", "2009_C", "2010_C", "2011_C",
@@ -141,7 +137,15 @@ red_totals = pd.DataFrame(data, columns = ["Project ID", "Project Name", "Volunt
                                             "Offset Project Operator ", "Authorized Project Designee", "Verifier", "Estimated Annual Emission Reductions", " PERs ", "Registry / ARB / WA", "ARB Project Detail", "ARB ID", "PoA ID/Aggregate ID", "CORSIA Eligible",
                                             "Project Listed", "Project Registered ", "CCB / Certifications", "Project Type From the Registry", "Registry Documents", "Project Website", "1996_II", "1997_II", "1998_II", "1999_II", "2000_II", "2001_II", "2002_II", "2003_II",
                                             "2004_II", "2005_II", "2006_II", "2007_II", "2008_II", "2009_II", "2010_II", "2011_II", "2012_II", "2013_II", "2014_II", "2015_II", "2016_II", "2017_II", "2018_II", "2019_II", "2020_II", "2021_II", "2022_II", "2023_II", "2024_II",
-                                            "Notes from Registry", "Notes from Berkeley Carbon Trading Project", "Added to Database Version - With Data Through"])
+                                            "Notes from Registry", "Notes from Berkeley Carbon Trading Project", "Added to Database Version - With Data Through"]
+
+data = []
+i = 0
+for item in names:
+    data.append(i)
+    i += 1
+
+red_totals = pd.DataFrame(data, columns = names)
 
 #--- Pinned Top Row
 go['pinnedTopRowData'] = red_totals.to_dict(orient="records")
