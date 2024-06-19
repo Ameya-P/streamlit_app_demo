@@ -126,9 +126,6 @@ go = builder.build()
 options_list = go.get('columnDefs')
 go['columnDefs'] = options_list[158:] #158 = number of columns in original data table
 
-#------------------ Final Table
-grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED, data_return_mode = DataReturnMode.FILTERED_AND_SORTED)
-
 #------------------ Totals 
 names = ["Project ID", "Project Name", "Voluntary Registry", "ARB/WA Project", "Voluntary Status", "Scope", " Type", "Reduction / Removal", "Methodology / Protocol", "Region", "Country", "State", "Project Site Location", "Project Developer",
                                             "Total Credits Issued", "Total Credits Retired", "Total Credits Remaining", "Total Buffer Pool Deposits", "Reversals Covered by Buffer Pool", "Reversals Not Covered by Buffer", "First Year of Project (Vintage)", "1996_IV", "1997_IV",
@@ -154,5 +151,5 @@ red_totals = pd.DataFrame([data], columns = names)
 #--- Pinned Top Row
 go['pinnedTopRowData'] = red_totals.to_dict(orient="records")
 
-#----------------
-grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED)
+#------------------ Final Table
+grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED, data_return_mode = DataReturnMode.FILTERED_AND_SORTED)
