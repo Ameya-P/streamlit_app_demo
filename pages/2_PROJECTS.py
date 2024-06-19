@@ -125,7 +125,7 @@ go = builder.build()
 #------------------ 
 def sum_col(df):
     total_sum = 0
-    columnData = df.iteritems()
+    columnData = df.items()
     for item in columnData:
         total_sum += int(item)
     
