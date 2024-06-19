@@ -2,7 +2,7 @@ from PIL import Image
 import streamlit as st
 from st_aggrid import AgGrid
 from st_aggrid import GridOptionsBuilder
-from st_aggrid import GridUpdateMode
+from st_aggrid import GridUpdateMode, DataReturnMode
 import pandas as pd
 
 logo = Image.open("resources/berkeley_logo.png")
@@ -126,6 +126,8 @@ go = builder.build()
 options_list = go.get('columnDefs')
 go['columnDefs'] = options_list[158:] #158 = number of columns in original data table
 
+#------------------ Final Table
+grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED, data_return_mode = DataReturnMode.FILTERED_AND_SORTED)
 
 #------------------ Totals 
 names = ["Project ID", "Project Name", "Voluntary Registry", "ARB/WA Project", "Voluntary Status", "Scope", " Type", "Reduction / Removal", "Methodology / Protocol", "Region", "Country", "State", "Project Site Location", "Project Developer",
@@ -141,15 +143,18 @@ names = ["Project ID", "Project Name", "Voluntary Registry", "ARB/WA Project", "
 
 data = []
 i = 0
-for item in names:
-    data.append(i)
-    i += 1
+
+#-- Basic Project Characteristics
+for item in range(0,14):
+    data.append("")
+
+#-- Credit Totals
+for item in range(14,20):
+    data.append("")
 
 red_totals = pd.DataFrame([data], columns = names)
 
 #--- Pinned Top Row
 go['pinnedTopRowData'] = red_totals.to_dict(orient="records")
 
-#------------------ Final Table
-grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED)
-
+grid_return = AgGrid(projects_tab, go, 800, update_mode = GridUpdateMode.FILTERING_CHANGED, data_return_mode = DataReturnMode.FILTERED_AND_SORTED)
