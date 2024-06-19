@@ -145,7 +145,7 @@ for item in names:
     data.append(i)
     i += 1
 
-red_totals = pd.DataFrame(data, columns = names)
+red_totals = pd.DataFrame([data], columns = names)
 
 #--- Pinned Top Row
 go['pinnedTopRowData'] = red_totals.to_dict(orient="records")
